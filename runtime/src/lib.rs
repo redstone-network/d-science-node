@@ -2163,6 +2163,21 @@ impl pallet_parameters::Config for Runtime {
 	type WeightInfo = ();
 }
 
+parameter_types! {
+	pub const DonatePalletId: PalletId = PalletId(*b"py/donat");
+	pub const UnsignedPriority: BlockNumber = 1;
+}
+
+impl pallet_donate::Config for Runtime {
+	type RuntimeEvent = RuntimeEvent;
+	type WeightInfo = ();
+	type Currency = Balances;
+	type TimeProvider = pallet_timestamp::Pallet<Runtime>;
+	type PalletId = DonatePalletId;
+	type UnsignedPriority = UnsignedPriority;
+}
+
+
 construct_runtime!(
 	pub enum Runtime {
 		System: frame_system,
@@ -2246,6 +2261,7 @@ construct_runtime!(
 		Mixnet: pallet_mixnet,
 		Parameters: pallet_parameters,
 		SkipFeelessPayment: pallet_skip_feeless_payment,
+		DonateModule: pallet_donate,
 	}
 );
 

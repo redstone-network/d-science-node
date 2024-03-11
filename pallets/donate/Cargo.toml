@@ -19,7 +19,7 @@ codec = { package = "parity-scale-codec", version = "3.6.1", default-features = 
 scale-info = {  default-features = false, features = ["derive"] }
 frame-benchmarking = { default-features = false, optional = true, git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.8.0" }
 frame-support = { default-features = false, git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.8.0" }
-frame-system = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.8.0" }
+frame-system = { default-features = false, git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.8.0" }
 log = { default-features = false }
 sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", default-features = false, branch = "release-polkadot-v1.8.0" }
 sp-std = { git = "https://github.com/paritytech/polkadot-sdk.git", default-features = false, branch = "release-polkadot-v1.8.0" }
