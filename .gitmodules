@@ -1,0 +1,3 @@
+[submodule "d-science-frontend"]
+	path = d-science-frontend
+	url = https://github.com/redstone-network/d-science-frontend.git
